@@ -14,9 +14,9 @@
     <div class="cite-wrap">
         <div class="main-div-wrap">
             <div class="main-video-wrap">
-                <video width="100%" controls>
-                    <source src="src/video/BigBuckBunny_320x180.mp4" type="video/mp4">
-                    <source src="src/video/BigBuckBunny_640x360.m4v" type="video/m4v">
+                <video width="100%" controls poster="./src/img/preview/big_bucks_bunny.jpg" id="video">
+                    <source id='mp4' src="./src/video/BigBuckBunny_320x180.mp4" type='video/mp4'>
+                    <source id='m4v' src="./src/video/BigBuckBunny_640x360.m4v" type='video/m4v'>
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -33,7 +33,7 @@
                     <div class="items-video-wrap">
                         <div class="items-image-div-wrap" ng-style="setStyles($index)"></div>
                     </div>
-                    <div class="items-movie-title pointer-cursor" ng-click="choose($index)"><h5>{{item.title}}</h5>
+                    <div class="items-movie-title pointer-cursor" ng-click="switchVideo($index, item)"><h5>{{item.title}}</h5>
                     </div>
                 </div>
             </div>
