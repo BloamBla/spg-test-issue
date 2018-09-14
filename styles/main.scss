@@ -3,9 +3,14 @@ html {
 }
 
 body {
-  width: 100%;
+  width: 80%;
   background: url(../src/img/progressive-back.jpg) no-repeat fixed;
   background-size: cover;
+  margin: 0 auto;
+}
+
+.pointer-cursor {
+  cursor: pointer;
 }
 
 .main-wrap {
@@ -27,9 +32,9 @@ body {
 .main-div-wrap {
   width: 100%;
   height: fit-content;
-  background: rgba(94, 93, 94, 0.78);
+  background: rgb(100, 98, 98);
   margin-bottom: 50px;
-  flex: 0 0 45%;
+  flex: 0 0 60%;
   border-radius: 30px;
   box-shadow: 0 0 45px darkgoldenrod;
 }
@@ -55,7 +60,7 @@ body {
 
 .secondary-div-item {
   margin: 15px 30px;
-  flex: 1 0 350px;
+  flex: 0 0 380px;
   height: 200px;
   background: rgba(0, 128, 72, 0.6);
   -webkit-border-radius: 15px;
@@ -67,22 +72,16 @@ body {
   height: 100%;
   width: inherit;
   margin: 0 auto;
-  background: url(../src/img/preview/elephants_dream.jpg) no-repeat center;
-  background-size: contain;
 }
 
 .items-image-div-wrap {
   height: 100%;
   width: inherit;
-  margin: 0 auto;
-  background: url(../src/img/preview/elephants_dream.jpg) no-repeat center;
-  background-size: contain;
 }
 
 .main-video-wrap {
   width: 100%;
-  height: 300px;
-  padding: 20px;
+  padding: 20px 50px;
   text-align: center;
 }
 
@@ -107,6 +106,7 @@ body {
 
 .movie-info {
   margin: 20px;
+  padding-left: 50px;
 }
 
 .tabulate {

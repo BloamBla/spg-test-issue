@@ -5,100 +5,40 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./src/img/icons8-tv-show-filled-50.png" type="text/png">
     <title>App</title>
     <script src="main.js"></script>
 </head>
 <body>
-    <div class="main-wrap" ng-controller="mainController">
-        <div class="cite-wrap">
-            <div class="main-div-wrap">
-                <div class="main-video-wrap">
-                    <div class="image-div-wrap"></div>
-                </div>
-                <div class="main-movie-title"><h3>{{data.bunny.title}}</h3></div>
-                <div class="movie-info">
-                    <p><b>Director:</b> Quentin Tarantino</p>
-                    <p><b>Movie description:</b></p>
-                    <p class="tabulate text-justify">{{data.elephant.description}}</p>
-                </div>
+<div class="main-wrap" ng-controller="mainController">
+    <div class="cite-wrap">
+        <div class="main-div-wrap">
+            <div class="main-video-wrap">
+                <video width="100%" controls>
+                    <source src="src/video/BigBuckBunny_320x180.mp4" type="video/mp4">
+                    <source src="src/video/BigBuckBunny_640x360.m4v" type="video/m4v">
+                    Your browser does not support the video tag.
+                </video>
             </div>
-            <div class="secondary-div-wrap">
-                <div class="secondary-div-items-wrap">
-                    <div class="secondary-div-item">
-                        <div class="items-video-wrap">
-                            <div class="items-image-div-wrap"></div>
-                        </div>
-                        <div class="items-movie-title"><h5>{{data.bunny.title}}</h5></div>
+            <div class="main-movie-title"><h3>{{choosenMovie.title}}</h3></div>
+            <div class="movie-info">
+                <p><b>Movie description:</b></p>
+                <p class="tabulate text-justify">{{choosenMovie.description}}</p>
+            </div>
+        </div>
+        <div class="secondary-div-wrap">
+            <div class="secondary-div-items-wrap">
+
+                <div ng-repeat="item in movies | limitTo:$scope.movies.length" class="secondary-div-item">
+                    <div class="items-video-wrap">
+                        <div class="items-image-div-wrap" ng-style="setStyles($index)"></div>
                     </div>
-                    <div class="secondary-div-item">
-                        <div class="items-video-wrap">
-                            <div class="items-image-div-wrap"></div>
-                        </div>
-                        <div class="items-movie-title"><h5>{{data.bunny.title}}</h5></div>
-                    </div>
-                    <div class="secondary-div-item">
-                        <div class="items-video-wrap">
-                            <div class="items-image-div-wrap"></div>
-                        </div>
-                        <div class="items-movie-title"><h5>{{data.bunny.title}}</h5></div>
-                    </div>
-                    <div class="secondary-div-item">
-                        <div class="items-video-wrap">
-                            <div class="items-image-div-wrap"></div>
-                        </div>
-                        <div class="items-movie-title"><h5>{{data.bunny.title}}</h5></div>
-                    </div>
-                    <div class="secondary-div-item">
-                        <div class="items-video-wrap">
-                            <div class="items-image-div-wrap"></div>
-                        </div>
-                        <div class="items-movie-title"><h5>{{data.bunny.title}}</h5></div>
-                    </div>
-                    <div class="secondary-div-item">
-                        <div class="items-video-wrap">
-                            <div class="items-image-div-wrap"></div>
-                        </div>
-                        <div class="items-movie-title"><h5>{{data.bunny.title}}</h5></div>
-                    </div>
-                    <div class="secondary-div-item">
-                        <div class="items-video-wrap">
-                            <div class="items-image-div-wrap"></div>
-                        </div>
-                        <div class="items-movie-title"><h5>{{data.bunny.title}}</h5></div>
-                    </div>
-                    <div class="secondary-div-item">
-                        <div class="items-video-wrap">
-                            <div class="items-image-div-wrap"></div>
-                        </div>
-                        <div class="items-movie-title"><h5>{{data.bunny.title}}</h5></div>
-                    </div>
-                    <div class="secondary-div-item">
-                        <div class="items-video-wrap">
-                            <div class="items-image-div-wrap"></div>
-                        </div>
-                        <div class="items-movie-title"><h5>{{data.bunny.title}}</h5></div>
-                    </div>
-                    <div class="secondary-div-item">
-                        <div class="items-video-wrap">
-                            <div class="items-image-div-wrap"></div>
-                        </div>
-                        <div class="items-movie-title"><h5>{{data.bunny.title}}</h5></div>
-                    </div>
-                    <div class="secondary-div-item">
-                        <div class="items-video-wrap">
-                            <div class="items-image-div-wrap"></div>
-                        </div>
-                        <div class="items-movie-title"><h5>{{data.bunny.title}}</h5></div>
-                    </div>
-                    <div class="secondary-div-item">
-                        <div class="items-video-wrap">
-                            <div class="items-image-div-wrap"></div>
-                        </div>
-                        <div class="items-movie-title"><h5>{{data.bunny.title}}</h5></div>
+                    <div class="items-movie-title pointer-cursor" ng-click="choose($index)"><h5>{{item.title}}</h5>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
