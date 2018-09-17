@@ -1,8 +1,8 @@
 <div class="main-div-wrap shadow-lg p-3 mb-5 bg-light rounded">
     <div class="main-video-wrap mb-4">
         <div class="video-container rounded">
-            <video class="video-tag" width="100%" controls id="video" poster="">
-                <source id="link">
+            <video class="video-tag" width="100%" controls id="video" poster={{posterSrc}}>
+                <source src={{sourceSrc}}>
                 {{whenLoad()}}
                 Your browser does not support the video tag.
             </video>

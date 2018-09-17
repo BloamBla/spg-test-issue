@@ -28,9 +28,10 @@ angular.module('App').controller('mainController',
         };
 
         $scope.setStyles = function (index) {
-            document.getElementsByClassName('items-image-div-wrap')[index].style.background =
-                'url(./src/img/' + $scope.movies[index].preview + ')' + 'no-repeat center';
-            document.getElementsByClassName('items-image-div-wrap')[index].style.backgroundSize = 'contain';
+            let style;
+                style = 'background: ' + 'url(./src/img/' + $scope.movies[index].preview + ')' + 'no-repeat center; '
+                    + 'background-size: contain';
+            return style;
         };
 
         $scope.changeMovie = function (item) {

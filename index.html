@@ -19,7 +19,7 @@
                 <div ng-repeat="item in movies | limitTo:$scope.movies.length" ng-click="changeMovie(item)"
                      class="secondary-div-item pointer-cursor shadow-lg bg-light rounded col">
                     <div class="items-video-wrap">
-                        <div class="items-image-div-wrap" ng-style="setStyles($index)"></div>
+                        <div class="items-image-div-wrap" style={{setStyles($index)}}></div>
                     </div>
                     <div class="items-movie-title"><h6>{{item.title}}</h6>
                     </div>
