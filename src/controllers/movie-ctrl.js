@@ -15,7 +15,7 @@ angular.module('App')
             if ($scope.movie.play === true) {
                 setTimeout(function () {
                     document.getElementById('video').play();
-            }, 1500);
+            }, 150);
             }
         };
 

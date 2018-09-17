@@ -5,6 +5,7 @@ html {
 body {
   width: 80%;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .pointer-cursor {
@@ -13,74 +14,35 @@ body {
 
 .main-wrap {
   margin: 0 auto;
-  padding: 10px 0 0 0;
   width: 100%;
-  height: max-content;
-}
-
-.video-tag {
-  height: inherit;
-  position: fixed;
-  left: 0;
-  top: 25px;
-  padding: 5px 25%;
-  z-index: 101;
-}
-
-.video-container {
-  height: inherit;
-  z-index: 100;
-  position: fixed;
-  left: 25%;
-  top: 25px;
-  padding: 0 25%;
-  background: rgba(0, 0, 0, 0.71);
+  height: 100vh;
 }
 
 .cite-wrap {
   width: 90%;
-  height: 100%;
   margin: 0 auto;
-  display: flex;
   padding: 10px;
-  flex-direction: column;
 }
 
 .main-div-wrap {
   width: 100%;
   height: fit-content;
-  margin-bottom: 50px;
-  flex: 0 0 60%;
 }
 
 .secondary-div-wrap {
   width: 100%;
-  height: max-content;
 }
 
 .secondary-div-items-wrap {
   width: 100%;
-  flex: 1 0;
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  justify-content: center;
-}
-
-.scrolled-video {
-  position: fixed;
-  top: 20px;
+  overflow-x: scroll;
 }
 
 .secondary-div-item {
   margin: 15px 20px;
-  flex: 0 1 280px;
+  flex: 0 0 300px;
   height: 180px;
-}
-
-.scrolled-video {
-  position: fixed;
-  top: 20px;
 }
 
 .image-div-wrap {
@@ -122,4 +84,8 @@ body {
 
 .tabulate {
   padding: 0 20px;
+}
+
+.video-tag {
+  height: inherit;
 }

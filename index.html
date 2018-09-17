@@ -10,14 +10,14 @@
     <script src="main.js"></script>
 </head>
 <body class="bg-light">
-<div class="main-wrap container" ng-controller="mainController">
+<div class="main-wrap" ng-controller="mainController">
     <div class="cite-wrap">
         <ng-view></ng-view>
         <div class="secondary-div-wrap">
-            <div class="secondary-div-items-wrap shadow-lg p-3 mb-5 bg-light rounded row">
+            <div class="secondary-div-items-wrap shadow-lg p-3 bg-light rounded">
 
-                <div ng-repeat="item in movies | limitTo:$scope.movies.length" ng-click="changeMovie(item)"
-                     class="secondary-div-item pointer-cursor shadow-lg bg-light rounded col">
+                <div ng-repeat="item in movies" ng-click="changeMovie(item)"
+                     class="secondary-div-item pointer-cursor shadow-lg bg-light rounded">
                     <div class="items-video-wrap">
                         <div class="items-image-div-wrap" style={{setStyles($index)}}></div>
                     </div>
