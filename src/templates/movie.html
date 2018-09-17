@@ -1,0 +1,20 @@
+<div class="main-div-wrap shadow-lg p-3 mb-5 bg-light rounded">
+    <div class="main-video-wrap mb-4">
+        <div class="video-container rounded">
+            <video class="video-tag" width="100%" controls id="video" poster="">
+                <source id="link">
+                {{whenLoad()}}
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="shadow-lg p-3 bg-light rounded">
+        <div class="main-movie-title"><h3>{{choosenMovie.title}}</h3></div>
+        <div class="movie-info">
+            <p><b>Movie description:</b></p>
+            <p class="tabulate text-justify">{{choosenMovie.director}}</p>
+            <p><b>Movie description:</b></p>
+            <p class="tabulate text-justify">{{choosenMovie.description}}</p>
+        </div>
+    </div>
+</div>

@@ -41,6 +41,8 @@ const conf = {
         new CopyWebpackPlugin([
             { from: 'index.html',
                 to: 'index.html'},
+            { from: 'src/templates/movie.html',
+                to: 'templates/movie.html'},
         ]),
     ],
 };

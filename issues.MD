@@ -18,6 +18,7 @@
 * Mozilla Firefox
 
 ## Frameworks
-* No frameworks required
+* No javascript frameworks required
+* UI frameworks can be used
 
 
